@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical" 
+android:background="@drawable/black">
+
+<ImageView 
+   		   	  android:src="@drawable/twitter"
+		      android:id="@+id/tw_status_img" 
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"		      
+		      android:layout_marginTop="80dip"
+		      android:gravity="center">		      
+</ImageView>
+
+
+<TextView 
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:id="@+id/txt"
+   android:text="Publica un Nuevo Tweet:"
+   />
+  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical" 
+android:layout_alignParentBottom="true"
+>
+      
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/twtfield"
+        android:layout_width="178px"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.80" />
+
+    <Button
+        android:id="@+id/tweetbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tweet" />
+</LinearLayout>
+
+</RelativeLayout>
+
+<Button
+    android:id="@+id/logffbtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Log Off" />
+
+</LinearLayout>
