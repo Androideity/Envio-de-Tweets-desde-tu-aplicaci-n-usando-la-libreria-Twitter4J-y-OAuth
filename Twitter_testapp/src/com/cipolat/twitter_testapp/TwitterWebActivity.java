@@ -10,18 +10,19 @@ import android.webkit.WebViewClient;
 public class TwitterWebActivity extends Activity {
 
 	private Intent mIntent;
+	Constants_Settings constants;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.twitter_webview);
 		mIntent = getIntent();
+		constants = new Constants_Settings();
 		String url = (String) mIntent.getExtras().get("URL");
 		WebView webView = (WebView) findViewById(R.id.webview);
 		webView.setWebViewClient(new WebViewClient() {
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-				if (url.contains(getResources().getString(
-						R.string.twitter_callback))) {
+		    	   if (url.contains(constants.TWITTER_CALLBACK)) {
 					Uri uri = Uri.parse(url);
 					String oauthVerifier = uri
 							.getQueryParameter("oauth_verifier");
